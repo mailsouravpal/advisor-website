@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #ffffff;
+    background: #f7f3ee;
     color: #1f2937;
     line-height: 1.6;
 }
@@ -60,7 +60,7 @@ body {
 }
 
 .primary {
-    background: #1d4ed8;
+    background: #b08a3c;
     color: #ffffff;
 }
 
@@ -92,7 +92,7 @@ body {
     padding: 20px;
     border: 1px solid #e5e7eb;
     border-radius: 6px;
-    background: #ffffff;
+    background: #f7f3ee;
     font-size: 14px;
 }
 
@@ -128,7 +128,7 @@ body {
 }
 
 .sticky-call {
-    background: #1d4ed8;
+    background: #b08a3c;
 }
 
 .sticky-whatsapp {
@@ -136,41 +136,52 @@ body {
 }
 
 
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.brand img { height: 40px; }
+.brand-text { display: flex; flex-direction: column; line-height: 1.2; }
+.brand-text strong { font-size: 15px; }
+.brand-text span { font-size: 11px; color: #6b5b3e; letter-spacing: 1px; }
 
-/* ===== Version 1.8 – Aggressive Section Spacing Reduction (~50%) ===== */
 
+/* ===== Version 1.7 – Reduced Section Spacing ===== */
+
+/* Reduce vertical gap between sections */
 .section {
-    padding: 20px 0;
+    padding: 35px 0;
 }
 
+/* Reduce gap for light sections */
 .section.light {
-    padding: 18px 0;
+    padding: 30px 0;
 }
 
+/* Reduce heading bottom margin */
 .section h1,
 .section h2 {
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 
+/* Reduce paragraph spacing */
 .section p {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
+/* Card spacing adjustment */
 .cards {
-    gap: 14px;
+    gap: 20px;
 }
 
-/* Extra-tight mobile spacing */
+/* Mobile fine-tuning */
 @media (max-width: 768px) {
     .section {
-        padding: 16px 0;
+        padding: 28px 0;
     }
 
     .section.light {
-        padding: 14px 0;
-    }
-
-    .cards {
-        gap: 12px;
+        padding: 24px 0;
     }
 }
