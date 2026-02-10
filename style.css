@@ -261,3 +261,28 @@ body {
         border-color: #b08d3b;
     }
 }
+
+
+/* ===== V1.07C2 – Primary CTA Emphasis ===== */
+.primary-cta {
+    display: inline-block;
+    background-color: #b08d3b;
+    color: #ffffff;
+    padding: 14px 26px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* ===== V1.07C3 – Trust Micro-copy ===== */
+.trust-strip {
+    text-align: center;
+    font-size: 14px;
+    color: #5a5145;
+    margin-top: 12px;
+}
+
+/* ===== SEO Accessibility ===== */
+img {
+    max-width: 100%;
+    height: auto;
+}
