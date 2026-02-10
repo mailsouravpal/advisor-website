@@ -187,50 +187,14 @@ body {
 }
 
 
-/* ===== V1.07.1 – Navigation Clarity (Option A) ===== */
+/* ===== V1.07.2 – Soft Background Banding (Option 2A) ===== */
 
-/* Make nav clearly clickable without button look */
-.nav a {
-    padding: 6px 10px;
-    position: relative;
+/* Subtle band background for section continuity */
+.section.band {
+    background-color: #f3efe8; /* very soft sand band */
 }
 
-/* Hover & tap feedback */
-.nav a:hover {
-    color: #b08a3c;
-}
-
-/* Soft underline indicator */
-.nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0%;
-    height: 2px;
-    background-color: #b08a3c;
-    transition: width 0.25s ease;
-}
-
-.nav a:hover::after,
-.nav a.active::after {
-    width: 100%;
-}
-
-/* Active page */
-.nav a.active {
-    font-weight: 600;
-    color: #b08a3c;
-}
-
-/* Mobile tap highlight */
-@media (max-width: 768px) {
-    .nav a {
-        padding: 10px 12px;
-    }
-
-    .nav a:active {
-        background-color: #f2ede6;
-        border-radius: 6px;
-    }
+/* Ensure cards still stand out */
+.section.band .card {
+    background-color: #ffffff;
 }
