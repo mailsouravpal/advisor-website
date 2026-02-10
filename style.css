@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #ffffff;
+    background: #f7f3ee;
     color: #1f2937;
     line-height: 1.6;
 }
@@ -60,7 +60,7 @@ body {
 }
 
 .primary {
-    background: #1d4ed8;
+    background: #b08a3c;
     color: #ffffff;
 }
 
@@ -92,7 +92,7 @@ body {
     padding: 20px;
     border: 1px solid #e5e7eb;
     border-radius: 6px;
-    background: #ffffff;
+    background: #f7f3ee;
     font-size: 14px;
 }
 
@@ -128,10 +128,20 @@ body {
 }
 
 .sticky-call {
-    background: #1d4ed8;
+    background: #b08a3c;
 }
 
 .sticky-whatsapp {
     background: #16a34a;
 }
 
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.brand img { height: 40px; }
+.brand-text { display: flex; flex-direction: column; line-height: 1.2; }
+.brand-text strong { font-size: 15px; }
+.brand-text span { font-size: 11px; color: #6b5b3e; letter-spacing: 1px; }
