@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculators | Financial Advisor</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .calc-box {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            background: #ffffff;
+        }
+        .calc-box label {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .calc-box input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        .calc-box button {
+            margin-top: 15px;
+            width: 100%;
+        }
+        .result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="logo">Financial Advisor</div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="goals.html">Goals</a>
+            <a href="calculators.html">Calculators</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section class="section">
+    <div class="container">
+        <h1>Investment Calculators</h1>
+        <p>Simple tools to help you understand your investment journey.</p>
+    </div>
+</section>
+
+<!-- SIP Calculator -->
+<div class="calc-box">
+    <h3>SIP Calculator</h3>
+
+    <label>Monthly Investment (₹)</label>
+    <input type="number" id="sipAmount">
+
+    <label>Expected Annual Return (%)</label>
+    <input type="number" id="sipRate">
+
+    <label>Time Period (Years)</label>
+    <input type="number" id="sipYears">
+
+    <button class="btn primary" onclick="calculateSIP()">Calculate</button>
+
+    <div class="result" id="sipResult"></div>
+</div>
+
+<!-- Lumpsum Calculator -->
+<div class="calc-box">
+    <h3>Lumpsum Calculator</h3>
+
+    <label>Investment Amount (₹)</label>
+    <input type="number" id="lumpAmount">
+
+    <label>Expected Annual Return (%)</label>
+    <input type="number" id="lumpRate">
+
+    <label>Time Period (Years)</label>
+    <input type="number" id="lumpYears">
+
+    <button class="btn primary" onclick="calculateLump()">Calculate</button>
+
+    <div class="result" id="lumpResult"></div>
+</div>
+
+<!-- SWP Calculator -->
+<div class="calc-box">
+    <h3>SWP Calculator</h3>
+
+    <label>Total Investment (₹)</label>
+    <input type="number" id="swpAmount">
+
+    <label>Monthly Withdrawal (₹)</label>
+    <input type="number" id="swpWithdraw">
+
+    <label>Expected Annual Return (%)</label>
+    <input type="number" id="swpRate">
+
+    <button class="btn primary" onclick="calculateSWP()">Calculate</button>
+
+    <div class="result" id="swpResult"></div>
+</div>
+
+<section class="section center">
+    <div class="container">
+        <p style="font-size:13px;color:#6b7280;">
+            Calculations are for illustration purposes only. Markets are subject to risk.
+        </p>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>© 2026 | Financial Advisor | Goal-Based Investing</p>
+</footer>
+
+<div class="sticky-buttons">
+    <a href="tel:+918017562548" class="sticky-call">Call</a>
+    <a href="https://wa.me/918017562548" class="sticky-whatsapp">WhatsApp</a>
+</div>
+
+<script>
+function calculateSIP() {
+    let p = document.getElementById("sipAmount").value;
+    let r = document.getElementById("sipRate").value / 100 / 12;
+    let n = document.getElementById("sipYears").value * 12;
+
+    let fv = p * ((Math.pow(1 + r, n) - 1) / r) * (1 + r);
+    document.getElementById("sipResult").innerHTML =
+        "Estimated Value: ₹ " + Math.round(fv).toLocaleString();
+}
+
+function calculateLump() {
+    let p = document.getElementById("lumpAmount").value;
+    let r = document.getElementById("lumpRate").value / 100;
+    let n = document.getElementById("lumpYears").value;
+
+    let fv = p * Math.pow(1 + r, n);
+    document.getElementById("lumpResult").innerHTML =
+        "Estimated Value: ₹ " + Math.round(fv).toLocaleString();
+}
+
+function calculateSWP() {
+    let total = document.getElementById("swpAmount").value;
+    let withdraw = document.getElementById("swpWithdraw").value;
+
+    let months = Math.floor(total / withdraw);
+    document.getElementById("swpResult").innerHTML =
+        "Approximate duration: " + months + " months";
+}
+</script>
+
+</body>
+</html>
