@@ -147,38 +147,42 @@ body {
 .brand-text span { font-size: 11px; color: #6b5b3e; letter-spacing: 1px; }
 
 
-/* ===== Version 1.4 – Header & Navigation Enhancement ===== */
+/* ===== Version 1.5 – Mobile Hamburger Navigation ===== */
 
-.brand-text strong {
-    font-size: 18px;
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #2b2b2b;
 }
 
-.brand-text span {
-    font-size: 13px;
+.nav-links {
+    display: flex;
+    gap: 12px;
 }
 
-/* Navigation button-style */
-.nav a {
-    padding: 8px 14px;
-    border-radius: 6px;
-    font-size: 15px;
-    border: 1px solid transparent;
-    transition: all 0.3s ease;
-}
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
 
-.nav a:hover {
-    background: #fbf9f6;
-    border: 1px solid #b08a3c;
-}
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #fbf9f6;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
 
-.nav a.active {
-    background: #b08a3c;
-    color: #ffffff;
-    border-color: #b08a3c;
-}
+    .nav-links.show {
+        display: flex;
+    }
 
-/* Improve header spacing */
-.header {
-    padding: 18px 0;
+    .nav a {
+        display: block;
+        width: 100%;
+    }
 }
-

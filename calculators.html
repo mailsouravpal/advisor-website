@@ -51,13 +51,21 @@
 </div>
 
         <nav class="nav">
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+<div class="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
             <a href="goals.html">Goals</a>
             <a href="calculators.html">Calculators</a>
             <a href="contact.html">Contact</a>
-        </nav>
+        </div>
+</nav>
+<script>
+function toggleMenu() {
+ document.querySelector(".nav-links").classList.toggle("show");
+}
+</script>
     </div>
 </header>
 
