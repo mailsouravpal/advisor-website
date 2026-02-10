@@ -147,37 +147,38 @@ body {
 .brand-text span { font-size: 11px; color: #6b5b3e; letter-spacing: 1px; }
 
 
-/* V1.3 Navigation UX Enhancements */
+/* ===== Version 1.4 – Header & Navigation Enhancement ===== */
+
+.brand-text strong {
+    font-size: 18px;
+}
+
+.brand-text span {
+    font-size: 13px;
+}
+
+/* Navigation button-style */
 .nav a {
-    position: relative;
-    padding-bottom: 5px;
-    cursor: pointer;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 15px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
 }
 
 .nav a:hover {
-    color: #b08a3c;
-}
-
-.nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0%;
-    height: 2px;
-    background: #b08a3c;
-    transition: width 0.3s ease;
-}
-
-.nav a:hover::after {
-    width: 100%;
+    background: #fbf9f6;
+    border: 1px solid #b08a3c;
 }
 
 .nav a.active {
-    color: #b08a3c;
-    font-weight: 600;
+    background: #b08a3c;
+    color: #ffffff;
+    border-color: #b08a3c;
 }
 
-.nav a.active::after {
-    width: 100%;
+/* Improve header spacing */
+.header {
+    padding: 18px 0;
 }
+
