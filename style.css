@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #ffffff;
+    background: #f7f3ee;
     color: #1f2937;
     line-height: 1.6;
 }
@@ -60,7 +60,7 @@ body {
 }
 
 .primary {
-    background: #1d4ed8;
+    background: #b08a3c;
     color: #ffffff;
 }
 
@@ -92,7 +92,7 @@ body {
     padding: 20px;
     border: 1px solid #e5e7eb;
     border-radius: 6px;
-    background: #ffffff;
+    background: #f7f3ee;
     font-size: 14px;
 }
 
@@ -128,7 +128,7 @@ body {
 }
 
 .sticky-call {
-    background: #1d4ed8;
+    background: #b08a3c;
 }
 
 .sticky-whatsapp {
@@ -136,37 +136,52 @@ body {
 }
 
 
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.brand img { height: 40px; }
+.brand-text { display: flex; flex-direction: column; line-height: 1.2; }
+.brand-text strong { font-size: 15px; }
+.brand-text span { font-size: 11px; color: #6b5b3e; letter-spacing: 1px; }
 
-/* ===== Version 1.10 – Structured Mobile Navigation ===== */
 
+/* ===== Version 1.7 – Reduced Section Spacing ===== */
+
+/* Reduce vertical gap between sections */
+.section {
+    padding: 35px 0;
+}
+
+/* Reduce gap for light sections */
+.section.light {
+    padding: 30px 0;
+}
+
+/* Reduce heading bottom margin */
+.section h1,
+.section h2 {
+    margin-bottom: 10px;
+}
+
+/* Reduce paragraph spacing */
+.section p {
+    margin-bottom: 12px;
+}
+
+/* Card spacing adjustment */
+.cards {
+    gap: 20px;
+}
+
+/* Mobile fine-tuning */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        background: #fbf9f6;
-        padding: 12px;
-        border-radius: 10px;
-        margin-top: 10px;
+    .section {
+        padding: 28px 0;
     }
 
-    .nav-links.show {
-        display: flex;
-    }
-
-    .nav-links a {
-        width: 100%;
-        text-align: center;
-        padding: 12px 16px;
-        border-radius: 10px;
-        background: #ffffff;
-        border: 1px solid #e5dfd4;
-        font-size: 15px;
-    }
-
-    .nav-links a.active {
-        background: #b08a3c;
-        color: #ffffff;
-        border-color: #b08a3c;
+    .section.light {
+        padding: 24px 0;
     }
 }
