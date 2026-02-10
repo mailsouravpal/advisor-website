@@ -187,14 +187,25 @@ body {
 }
 
 
-/* ===== V1.07.2 – Soft Background Banding (Option 2A) ===== */
+/* ===== V1.07A – Spacing Optimization (35% Reduction) ===== */
 
-/* Subtle band background for section continuity */
-.section.band {
-    background-color: #f3efe8; /* very soft sand band */
+/* Section spacing */
+.section {
+    padding-top: 48px;
+    padding-bottom: 48px;
 }
 
-/* Ensure cards still stand out */
-.section.band .card {
-    background-color: #ffffff;
+/* Headings closer to content */
+.section h2 {
+    margin-bottom: 20px;
+}
+
+/* Card grid tighter */
+.card-grid {
+    row-gap: 20px;
+}
+
+/* Hero to next section flow */
+.hero {
+    padding-bottom: 56px;
 }
