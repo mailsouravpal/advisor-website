@@ -209,3 +209,30 @@ body {
 .hero {
     padding-bottom: 56px;
 }
+
+
+/* ===== V1.07B1 – Section Accent Line Hierarchy ===== */
+
+/* Section heading styling */
+.section h2 {
+    position: relative;
+    padding-bottom: 12px;
+    margin-bottom: 22px;
+}
+
+/* Gold accent line under section headings */
+.section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 48px;
+    height: 3px;
+    background-color: #b08d3b; /* brand gold */
+    border-radius: 2px;
+}
+
+/* Hero headline stays clean (no accent) */
+.hero h1::after {
+    content: none;
+}
