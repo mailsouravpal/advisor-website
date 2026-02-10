@@ -147,41 +147,32 @@ body {
 .brand-text span { font-size: 11px; color: #6b5b3e; letter-spacing: 1px; }
 
 
-/* ===== Version 1.7 – Reduced Section Spacing ===== */
+/* ===== Version 1.9 – Navigation Button Background ===== */
 
-/* Reduce vertical gap between sections */
-.section {
-    padding: 35px 0;
+.nav a {
+    background: #fbf9f6;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid #e5dfd4;
+    font-size: 14px;
+    transition: all 0.25s ease;
 }
 
-/* Reduce gap for light sections */
-.section.light {
-    padding: 30px 0;
+.nav a:hover {
+    background: #f1ece4;
+    border-color: #b08a3c;
+    color: #2b2b2b;
 }
 
-/* Reduce heading bottom margin */
-.section h1,
-.section h2 {
-    margin-bottom: 10px;
+.nav a.active {
+    background: #b08a3c;
+    color: #ffffff;
+    border-color: #b08a3c;
 }
 
-/* Reduce paragraph spacing */
-.section p {
-    margin-bottom: 12px;
-}
-
-/* Card spacing adjustment */
-.cards {
-    gap: 20px;
-}
-
-/* Mobile fine-tuning */
 @media (max-width: 768px) {
-    .section {
-        padding: 28px 0;
-    }
-
-    .section.light {
-        padding: 24px 0;
+    .nav-links a {
+        width: 100%;
+        text-align: center;
     }
 }
