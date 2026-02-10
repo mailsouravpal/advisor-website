@@ -147,42 +147,25 @@ body {
 .brand-text span { font-size: 11px; color: #6b5b3e; letter-spacing: 1px; }
 
 
-/* ===== Version 1.5 – Mobile Hamburger Navigation ===== */
+/* ===== Version 1.6 – Brand Hierarchy Upgrade ===== */
 
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #2b2b2b;
+.brand-text strong {
+    font-size: 22px;
+    font-weight: 600;
 }
 
-.nav-links {
-    display: flex;
-    gap: 12px;
+.brand-text span {
+    font-size: 15px;
+    letter-spacing: 1.5px;
 }
 
+/* Mobile-specific brand boost */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
+    .brand-text strong {
+        font-size: 20px;
     }
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background: #fbf9f6;
-        padding: 15px;
-        border-radius: 8px;
-        margin-top: 10px;
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-
-    .nav a {
-        display: block;
-        width: 100%;
+    .brand-text span {
+        font-size: 14px;
     }
 }
