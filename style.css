@@ -236,3 +236,28 @@ body {
 .hero h1::after {
     content: none;
 }
+
+
+/* ===== V1.07C1 – Card Interaction Cues (Decision Clarity) ===== */
+
+/* Base card enhancement */
+.card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    border: 1px solid #e6e0d6;
+}
+
+/* Hover / focus cue (desktop) */
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    border-color: #b08d3b;
+}
+
+/* Mobile tap feedback */
+@media (max-width: 768px) {
+    .card:active {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+        border-color: #b08d3b;
+    }
+}
