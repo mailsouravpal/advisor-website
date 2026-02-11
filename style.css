@@ -286,3 +286,33 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+
+/* ===== Premium Refinement Layer ===== */
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.card-sub {
+    display: block;
+    font-size: 13px;
+    margin-top: 6px;
+    color: #6a6258;
+}
+
+.section-intro {
+    margin-bottom: 18px;
+    color: #6a6258;
+    font-size: 15px;
+}
+
+.section:nth-of-type(3) .card {
+    padding: 22px;
+}
+
+.floating-call {
+    display: none !important;
+}
