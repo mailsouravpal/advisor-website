@@ -378,3 +378,39 @@ img {
         font-size: 20px;
     }
 }
+
+/* =====================================
+   CLEAN MOBILE HERO + BUTTON FIX
+===================================== */
+
+@media (max-width: 768px) {
+
+  .hero-container {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .hero-buttons a,
+  .primary-cta,
+  .secondary-cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  .primary-cta,
+  .secondary-cta {
+    white-space: normal;
+  }
+
+}
+
+/* Prevent floating button overlapping content */
+body {
+  padding-bottom: 100px;
+}
