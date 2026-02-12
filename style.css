@@ -316,3 +316,65 @@ img {
 .floating-call {
     display: none !important;
 }
+
+
+/* ===== Premium Hero Upgrade ===== */
+
+.premium-hero {
+    padding: 90px 0;
+    position: relative;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-subline {
+    display: block;
+    font-size: 26px;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #3a342c;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.1;
+}
+
+.premium-hero::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 38%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(176,141,59,0.12), rgba(176,141,59,0.05));
+    z-index: 0;
+}
+
+.primary-cta {
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+
+    .premium-hero::after {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-subline {
+        font-size: 20px;
+    }
+}
